@@ -1,2 +1,8 @@
 # LIFF-message
-![スクリーンショット 2021-05-03 23 53 44](https://user-images.githubusercontent.com/78517616/116893316-cadea880-ac6b-11eb-849f-ead69cdbfe98.png)
+LINE内で動くアプリケーション
+今回は誕生日を祝うカウントダウンのモノを作成
+#Demo
+送りたい相手にURLを送ると誕生日までのカウントダウンが始まる。
+既読をつけると「見ました！」とメッセージで送られ、アラートで「既読をつけました」と流れる
+![スクリーンショット 2021-05-04 0 05 33](https://user-images.githubusercontent.com/78517616/116894014-8bfd2280-ac6c-11eb-933a-f9d824a2f495.png)
+
