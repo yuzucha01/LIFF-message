@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+    <link href="img/box.png" rel="icon" />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Libraries CSS Files -->
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="h">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h1>YOUR BIRTHDAY</h1>
+            <h3>SOON</h3>
+            <div class="countdown-header">
+              <!-- 相手の誕生日を記入 -->
+              <div class="countdown" data-date="2021/6/1"></div>
+            </div>
+            <div class="button" onClick="sendHappy()">既読をつける</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/php-mail-form/validate.js"></script>
+    <script src="lib/countdown/jquery.plugin.min.js"></script>
+    <script src="lib/countdown/jquery.countdown.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script
+      charset="utf-8"
+      src="https://static.line-scdn.net/liff/edge/2/sdk.js"
+    ></script>
+    <script>
+      liff
+        .init({
+          liffId: "XXXXXXXXX",
+        })
+        .then(() => {});
+
+      function sendHappy() {
+        liff
+          .sendMessages([
+            {
+              type: "text",
+              text: "見ました！",
+            },
+          ])
+          .then(function () {
+            window.alert("既読をつけました");
+          });
+      }
+    </script>
+  </body>
+</html>
