@@ -48,12 +48,14 @@
       src="https://static.line-scdn.net/liff/edge/2/sdk.js"
     ></script>
     <script>
+      <!-- liffIDを入力 -->
       liff
         .init({
           liffId: "XXXXXXXXX",
         })
         .then(() => {});
 
+      <!-- ボタンを押すと相手のラインにテキストが送られ、アラートを表示する -->
       function sendHappy() {
         liff
           .sendMessages([
